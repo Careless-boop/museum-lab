@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Museum main</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav container">
+        <img class="header__logo" src="img/favicon.ico" alt="Museum logo" />
+        <ul class="header__links">
+          <li class="header__links-item">
+            <a class="header__link" href="#">About us</a>
+          </li>
+          <li class="header__links-item">
+            <a class="header__link" href="#">Schedule</a>
+          </li>
+          <li class="header__links-item">
+            <a class="header__link" href="#">Contacts</a>
+          </li>
+        </ul>
+        <div class="header__socials">
+          <a class="header__social-link"
+            ><img
+              class="header__social-logo"
+              src="img/instagram-logo.webp"
+              alt="Instagram logo"
+            />
+          </a>
+        </div>
+      </nav>
+      <div class="header__hero">
+        <div class="hero__content container">
+          <h1 class="hero__title">Kahovski Museum of Modern Art</h1>
+          <p class="hero__text">
+            Welcome to our official page. Explore all interesting sections!
+          </p>
+          <img
+            class="hero__arrow"
+            src="img/down-arrow.svg"
+            alt="Arrow down icon"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="about-us" id="about-us">
+        <div class="about-us__wrapper container">
+          <div class="about-us__header">
+            <h3 class="about-us__subtitle">Modern Culture and Art</h3>
+            <h2 class="about-us__title">About our museum</h2>
+          </div>
+          <div class="about-us__content">
+            <div class="about-us__image-container">
+              <img
+                class="about-us__image"
+                src="img/about-us-image.jpg"
+                alt="Photo of Muskegon for About section"
+              />
+            </div>
+            <div class="about-us__text-container">
+              <h4 class="about-us__text-title">Lorem Ipsum</h4>
+              <p class="about-us__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Maecenas blandit massa vel fermentum elementum. Phasellus eget
+                felis quis diam rutrum semper. Nulla facilisi. Vestibulum vitae
+                iaculis leo. Donec ultricies ligula tortor, eget commodo nisl
+                varius at. Integer eu pharetra ligula, vitae pharetra ex.
+                Vivamus id eleifend neque, eget suscipit libero. Duis iaculis
+                elit in mi semper pulvinar. Etiam et purus sit amet nunc
+                convallis dapibus. Fusce dictum molestie mattis. Pellentesque eu
+                ullamcorper urna, sodales condimentum leo. Integer sollicitudin
+                semper arcu, a faucibus ex aliquam ac. Proin ac pulvinar felis.
+                Mauris blandit volutpat quam, ac eleifend magna volutpat et.
+              </p>
+              <p class="about-us__text">
+                Integer nec porta arcu. Proin varius luctus tincidunt. Lorem
+                ipsum dolor sit amet, consectetur adipiscing elit. In aliquet
+                nunc quis ante tincidunt pulvinar. Aenean tincidunt hendrerit
+                suscipit. Praesent at ligula eget neque scelerisque vulputate
+                consectetur quis odio. Nam lacinia velit tortor, id aliquam
+                magna venenatis vitae.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="latest">
+        <div class="latest__container container">
+          <div class="latest__header">
+            <h2 class="latest__title">Latest achievments</h2>
+            <p class="latest__text">
+              We are going to beat this statistics in a near future.
+            </p>
+          </div>
+          <div class="latest__achievments">
+            <ul class="latest__list">
+              <li class="latest__achievment">
+                <img
+                  class="latest__achievment-icon"
+                  src="img/exhibition-icon.png"
+                  alt="Exhibition icon"
+                /><span class="latest__achievment-number">320</span>Exhibitions
+                made
+              </li>
+              <li class="latest__achievment">
+                <img
+                  class="latest__achievment-icon"
+                  src="img/money-icon.png"
+                  alt="Money icon"
+                /><span class="latest__achievment-number">1.5M</span>Money
+                donated
+              </li>
+              <li class="latest__achievment">
+                <img
+                  class="latest__achievment-icon"
+                  src="img/project-icon.png"
+                  alt="Project icon"
+                /><span class="latest__achievment-number">31</span>Projects
+                supported
+              </li>
+              <li class="latest__achievment">
+                <img
+                  class="latest__achievment-icon"
+                  src="img/auction-icon.webp"
+                  alt="Auction icon"
+                /><span class="latest__achievment-number">12</span>Auctions
+                organised
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="contact-us" id="contact-us">
+        <div class="contact-us__container container">
+          <div class="contact-us__info">
+            <h2 class="contact-us__heading">Contact Information</h2>
+            <p class="contact-us__address">1234 Street Name, City</p>
+            <p class="contact-us__town">Town</p>
+            <p class="contact-us__country">Country</p>
+            <p class="contact-us__number">Phone: +123 456 7890</p>
+            <p class="contact-us__contact-name">Contact Person: John Doe</p>
+          </div>
+          <div class="contact-us__form-container">
+            <form
+              class="contact-us__form"
+              action="/submit-contact-info"
+              method="POST"
+            >
+              <label for="email" class="contact-us__form-label">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="contact-us__form-input"
+                required
+              />
+              <label for="message" class="contact-us__form-label"
+                >Message:</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                class="contact-us__form-textarea"
+                required
+              ></textarea>
+              <button type="submit" class="contact-us__form-submit">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__content">
+          <div class="footer__logo-container">
+            <img src="img/favicon.ico" alt="Museum logo" class="footer__logo" />
+          </div>
+          <nav class="footer__nav">
+            <a href="index.html#about-us" class="footer__link">About Us</a>
+            <a href="#" class="footer__link">Schedule</a>
+            <a href="index.html#contact-us" class="footer__link">Contact Us</a>
+          </nav>
+        </div>
+        <div class="footer__unnecessary">
+          <p class="footer__copyright">
+            © 2024 Kahovski Museum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

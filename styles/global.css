@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Guntur:wght@300;400;500;600;700&family=Oswald:wght@200..700&display=swap");
+
+:root{
+  font-family: "Hind Guntur", sans-serif;
+  font-size: 20px;
+  --main-background-color: rgb(243, 243, 243);
+  --about-us-background-color: rgb(215,215,215);
+  --additionals-color: rgb(150, 150, 150);
+  --text-color: rgb(14, 14, 14);
+  --alternative-text-color: rgb(240, 240, 240);
+  --contact-us-button-color: rgb(170,170,170);
+  --contact-us-button-border-color: rgb(14,14,14);
+  --footer-background-color: rgb(45,45,45);
+  color: var(--text-color);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: "Oswald", sans-serif;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.main{
+  background-color: var(--main-background-color);
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+@media (max-width:550px){
+  :root{
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,51 @@
+.latest {
+  background-image: url("../img/latest-background.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--alternative-text-color);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.latest__header {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.latest__title {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.latest__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.latest__achievment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.latest__achievment-number{
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: -20px;
+}
+.latest__achievment-icon {
+  width: 6rem;
+  object-fit: cover;
+  filter: brightness(0) invert(1);
+}
+@media (max-width:550px) {
+  .latest__list {
+    flex-direction: column;
+  }
+}
