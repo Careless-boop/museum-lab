@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/schedule.css" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Museum main</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav id="header-nav" class="header__nav container">
+        <img class="header__logo" src="img/favicon.ico" alt="Museum logo" />
+        <ul class="header__links">
+          <li class="header__links-item">
+            <a class="header__link" href="index.html#about-us">About us</a>
+          </li>
+          <li class="header__links-item">
+            <a class="header__link" href="schedule.html#schedule">Schedule</a>
+          </li>
+          <li class="header__links-item">
+            <a class="header__link" href="index.html#contact-us">Contacts</a>
+          </li>
+        </ul>
+        <div class="header__socials">
+          <a class="header__social-link"
+            ><img
+              class="header__social-logo"
+              src="img/instagram-logo.webp"
+              alt="Instagram logo"
+            />
+          </a>
+        </div>
+      </nav>
+      <div class="header__hero">
+        <div class="hero__content container">
+          <h1 class="hero__title">Kakhovski Museum of Modern Art</h1>
+          <p class="hero__text">
+            Welcome to our official page. Explore all interesting sections!
+          </p>
+          <img
+            class="hero__arrow"
+            src="img/down-arrow.svg"
+            alt="Arrow down icon"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="schedule container" id="schedule">
+        <h2 class="schedule__title">Exhibition List</h2>
+        <div class="schedule__exhibitions" id="exhibitions">
+          <div
+            class="schedule__exhibition"
+            v-for="exhibition in exhibitions"
+            :key="exhibition.id"
+          >
+            <img
+              class="exhibition__img"
+              :src="exhibition.image"
+              alt="exhibition.title"
+            />
+            <div class="exhibition__details">
+              <div class="exhibition__detail">{{ exhibition.title}}</div>
+              <div class="exhibition__detail">{{ exhibition.price}} uah.</div>
+              <button
+                class="exhibition__add-button"
+                @click="addToCart(exhibition)"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="schedule__total">
+          <h3 class="schedule__total-price">
+            Selected tickets: {{ selectedExhibitionsCount }}
+          </h3>
+          <button class="schedule__total-open-button" @click="openModal(true)">
+            Show cart
+          </button>
+        </div>
+        <div v-if="isModalOpen" class="schedule__modal">
+          <div class="modal__content">
+            <span class="modal__close" @click="openModal(false)">&times;</span>
+            <ul class="modal__list">
+              <li
+                class="modal__item"
+                v-for="(exhibition, index) in selectedExhibitionsDetails"
+                :key="exhibition.id"
+              >
+                <div class="modal__item-details">
+                  <img class="modal__item-img" :src="exhibition.image" />
+                  <div class="modal__item-text">
+                    <p>{{exhibition.title}}</p>
+                    <p>{{ exhibition.price}} uah</p>
+                    <p>{{exhibition.time}}</p>
+                  </div>
+                </div>
+                <button
+                  class="modal__item-remove-button"
+                  @click="removeFromCart(index)"
+                >
+                  x
+                </button>
+              </li>
+            </ul>
+            <p class="modal__total">Tickets: {{ selectedExhibitionsCount }}</p>
+            <p class="modal__total">Total price: {{ totalPrice }}</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__content">
+          <div class="footer__logo-container">
+            <img
+              id="footer-icon"
+              src="img/favicon.ico"
+              alt="Museum logo"
+              class="footer__logo"
+            />
+          </div>
+          <nav class="footer__nav">
+            <a href="index.html#about-us" class="footer__link">About Us</a>
+            <a href="schedule.html#schedule" class="footer__link">Schedule</a>
+            <a href="index.html#contact-us" class="footer__link">Contact Us</a>
+          </nav>
+        </div>
+        <div class="footer__unnecessary">
+          <p class="footer__copyright">
+            © 2024 Kakhovski Museum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/header.js"></script>
+  </body>
+</html>

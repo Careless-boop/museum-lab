@@ -9,14 +9,14 @@
   </head>
   <body>
     <header class="header">
-      <nav class="header__nav container">
+      <nav id="header-nav" class="header__nav container">
         <img class="header__logo" src="img/favicon.ico" alt="Museum logo" />
         <ul class="header__links">
           <li class="header__links-item">
             <a class="header__link" href="index.html#about-us">About us</a>
           </li>
           <li class="header__links-item">
-            <a class="header__link" href="#">Schedule</a>
+            <a class="header__link" href="schedule.html#schedule">Schedule</a>
           </li>
           <li class="header__links-item">
             <a class="header__link" href="index.html#contact-us">Contacts</a>
@@ -142,7 +142,9 @@
             <p class="contact-us__town">Kherson</p>
             <p class="contact-us__country">Ukraine</p>
             <p class="contact-us__number">Phone: +380 501 105 083</p>
-            <p class="contact-us__contact-name">Contact Person: Oleg Lobaevskiy</p>
+            <p class="contact-us__contact-name">
+              Contact Person: Oleg Lobaevskiy
+            </p>
           </div>
           <div class="contact-us__form-container">
             <form
@@ -179,11 +181,16 @@
       <div class="footer__container container">
         <div class="footer__content">
           <div class="footer__logo-container">
-            <img src="img/favicon.ico" alt="Museum logo" class="footer__logo" />
+            <img
+              id="footer-icon"
+              src="img/favicon.ico"
+              alt="Museum logo"
+              class="footer__logo"
+            />
           </div>
           <nav class="footer__nav">
             <a href="index.html#about-us" class="footer__link">About Us</a>
-            <a href="#" class="footer__link">Schedule</a>
+            <a href="schedule.html#schedule" class="footer__link">Schedule</a>
             <a href="index.html#contact-us" class="footer__link">Contact Us</a>
           </nav>
         </div>
@@ -194,5 +201,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/header.js"></script>
   </body>
 </html>
